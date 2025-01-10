@@ -1,5 +1,4 @@
 name: Generate Packages
-
 on:
   push:
     paths:
@@ -20,6 +19,13 @@ jobs:
       run: |
         dpkg-scanpackages ./debs /dev/null > Packages
         bzip2 -c Packages > Packages.bz2
+
+    - name: Check for changes
+      run: |
+        if git diff-index --quiet HEAD --; then
+          echo "No changes to commit."
+          exit 0
+        fi
 
     - name: Commit and push generated files
       run: |
