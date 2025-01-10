@@ -1,0 +1,16 @@
+Package: AWZ
+Version: 14.0.1
+Architecture: iphoneos-arm
+Depends: mobilesubstrate, coreutils-bin, zip, unzip
+Conflicts: app.weiphone.ALS, app.weiphone.IGG, app.weiphone.NZT, app.weiphone.LRN, app.weiphone.HBS, app.weiphone.YOY
+Filename: ./debs/AWZ_14.0.1.deb
+Size: 14241930
+MD5sum: b816fb714f1322232f91727e9efcd9bf
+SHA1: 058f550579f6bf57e93d205aa121708396fe12b3
+SHA256: 108ed84f36dc69bc0dbe14c307ef5e1a8ec539a414f98d49cc786c22db39f618
+Section: AWZ爱伪装
+Priority: standard
+Author: awz
+Icon: file:///Applications/AWZ.app/AWZAppIcon60x60@2x.png
+Name: AWZ爱伪装
+
