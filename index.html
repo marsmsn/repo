@@ -3,87 +3,99 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Debian Package Repository</title>
+    <title>My Debian Repository</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f9f9f9;
+            background: #f8f9fa;
             color: #333;
             line-height: 1.6;
         }
         header {
             background: #4CAF50;
             color: white;
-            padding: 1rem 0;
+            padding: 2rem 0;
             text-align: center;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+        header p {
+            font-size: 1.2rem;
         }
         main {
             padding: 2rem;
-            max-width: 800px;
-            margin: auto;
+            max-width: 960px;
+            margin: 0 auto;
         }
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 1rem;
+        pre {
+            background: #e9ecef;
+            padding: 1rem;
+            border-radius: 5px;
+            overflow-x: auto;
+            font-size: 1rem;
         }
-        table th, table td {
+        .info-box {
+            background: white;
             border: 1px solid #ddd;
-            padding: 0.5rem;
+            border-radius: 5px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
         }
-        table th {
-            background-color: #f4f4f4;
-        }
-        a {
-            color: #4CAF50;
-            text-decoration: none;
+        .info-box h2 {
+            margin-top: 0;
+            font-size: 1.5rem;
         }
         footer {
             text-align: center;
-            padding: 1rem 0;
+            padding: 1.5rem 0;
             background: #333;
             color: white;
             margin-top: 2rem;
+        }
+        footer a {
+            color: #4CAF50;
+            text-decoration: none;
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>My Debian Package Repository</h1>
-        <p>Welcome to my custom Debian repository. Use the following information to add this source to your system.</p>
+        <h1>Welcome to My Debian Repository</h1>
+        <p>Custom packages for your Debian-based systems</p>
     </header>
     <main>
-        <h2>Repository Details</h2>
-        <pre>
+        <div class="info-box">
+            <h2>How to Add This Repository</h2>
+            <p>To use this repository, add the following line to your <code>/etc/apt/sources.list</code> or create a new file in <code>/etc/apt/sources.list.d/</code>:</p>
+            <pre>
 deb [trusted=yes] https://marsmsn.github.io/repo/ ./
-        </pre>
-        <p>Run the following commands to add the repository:</p>
-        <pre>
-echo "deb [trusted=yes] https://marsmsn.github.io/repo/ ./" | sudo tee /etc/apt/sources.list.d/custom-repo.list
+            </pre>
+            <p>Then, update your package list:</p>
+            <pre>
 sudo apt update
-        </pre>
+            </pre>
+        </div>
 
-        <h2>Available Packages</h2>
-        <table>
-            <thead>
-                <tr>
-                    <th>Package Name</th>
-                    <th>Download</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>example-package_1.0.0.deb</td>
-                    <td><a href="./debs/example-package_1.0.0.deb">Download</a></td>
-                </tr>
-                <!-- Add more packages here -->
-            </tbody>
-        </table>
+        <div class="info-box">
+            <h2>What’s Inside?</h2>
+            <p>This repository contains custom packages for Debian-based systems. Once added, you can install packages directly using:</p>
+            <pre>
+sudo apt install package-name
+            </pre>
+            <p>Replace <code>package-name</code> with the name of the package you want to install.</p>
+        </div>
+
+        <div class="info-box">
+            <h2>Need Help?</h2>
+            <p>If you encounter any issues or have questions, feel free to visit the <a href="https://github.com/marsmsn/repo">GitHub repository</a> for more details or to report issues.</p>
+        </div>
     </main>
     <footer>
-        <p>Hosted on GitHub Pages | Maintained by <a href="https://github.com/marsmsn">marsmsn</a></p>
+        <p>Powered by <a href="https://github.com/">GitHub Pages</a> | Maintained by <a href="https://github.com/marsmsn">marsmsn</a></p>
     </footer>
 </body>
 </html>
