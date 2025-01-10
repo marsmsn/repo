@@ -8,7 +8,7 @@ Size: 14241930
 MD5sum: b816fb714f1322232f91727e9efcd9bf
 SHA1: 058f550579f6bf57e93d205aa121708396fe12b3
 SHA256: 108ed84f36dc69bc0dbe14c307ef5e1a8ec539a414f98d49cc786c22db39f618
-Section: AWZ爱伪装
+Section: AWZ/ALS/AXJ/IGG/YOY
 Priority: standard
 Author: awz
 Icon: file:///Applications/AWZ.app/AWZAppIcon60x60@2x.png
@@ -23,7 +23,7 @@ Size: 4361638
 MD5sum: 94e1c409865427e02ef58bc58e303f16
 SHA1: 09b13ecb1530300376a90e1527e20df3a4fae879
 SHA256: a107c70cf1db6519883dfc11c1041b498f310ee08b56ebccb73e30c5d38932fb
-Section: System
+Section: MASK 屏蔽检测
 Priority: optional
 Author: mxsf
 Icon: /Applications/Mask.app/AppIcon.png
