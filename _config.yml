@@ -1,0 +1,10 @@
+title: DD Technology
+description: DD Technology
+baseurl: "" # 如果部署在根目录下，留空
+url: "https://marsmsn.github.io/repo" # 替换为你的GitHub Pages地址
+
+markdown: kramdown
+theme: minima # 默认主题，可以替换为你想使用的主题
+
+plugins:
+  - jekyll-feed
