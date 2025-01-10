@@ -1,0 +1,30 @@
+name: Generate Packages
+
+on:
+  push:
+    paths:
+      - 'debs/**'  # 监听 debs 文件夹的变化
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+
+    - name: Set up dpkg tools
+      run: sudo apt-get update && sudo apt-get install -y dpkg-dev
+
+    - name: Generate Packages and Packages.bz2
+      run: |
+        dpkg-scanpackages ./debs /dev/null > Packages
+        bzip2 -c Packages > Packages.bz2
+
+    - name: Commit and push generated files
+      run: |
+        git config --global user.name "GitHub Actions"
+        git config --global user.email "actions@github.com"
+        git add Packages Packages.bz2
+        git commit -m "Update Packages and Packages.bz2"
+        git push
