@@ -1,10 +1,89 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>My Repository</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Debian Package Repository</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+            line-height: 1.6;
+        }
+        header {
+            background: #4CAF50;
+            color: white;
+            padding: 1rem 0;
+            text-align: center;
+        }
+        main {
+            padding: 2rem;
+            max-width: 800px;
+            margin: auto;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1rem;
+        }
+        table th, table td {
+            border: 1px solid #ddd;
+            padding: 0.5rem;
+        }
+        table th {
+            background-color: #f4f4f4;
+        }
+        a {
+            color: #4CAF50;
+            text-decoration: none;
+        }
+        footer {
+            text-align: center;
+            padding: 1rem 0;
+            background: #333;
+            color: white;
+            margin-top: 2rem;
+        }
+    </style>
 </head>
 <body>
-    <h1>Welcome to My Repository</h1>
-    <p>Here is the Debian package repository.</p>
+    <header>
+        <h1>My Debian Package Repository</h1>
+        <p>Welcome to my custom Debian repository. Use the following information to add this source to your system.</p>
+    </header>
+    <main>
+        <h2>Repository Details</h2>
+        <pre>
+deb [trusted=yes] https://marsmsn.github.io/repo/ ./
+        </pre>
+        <p>Run the following commands to add the repository:</p>
+        <pre>
+echo "deb [trusted=yes] https://marsmsn.github.io/repo/ ./" | sudo tee /etc/apt/sources.list.d/custom-repo.list
+sudo apt update
+        </pre>
+
+        <h2>Available Packages</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Package Name</th>
+                    <th>Download</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>example-package_1.0.0.deb</td>
+                    <td><a href="./debs/example-package_1.0.0.deb">Download</a></td>
+                </tr>
+                <!-- Add more packages here -->
+            </tbody>
+        </table>
+    </main>
+    <footer>
+        <p>Hosted on GitHub Pages | Maintained by <a href="https://github.com/marsmsn">marsmsn</a></p>
+    </footer>
 </body>
 </html>
